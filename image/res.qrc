@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>distance.png</file>
+    <file>new.png</file>
+    <file>popular.png</file>
+  </qresource>
+</RCC>
