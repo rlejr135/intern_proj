@@ -12,9 +12,9 @@ import webbrowser
 HOST = '127.0.0.1'  # insert web app's address
 PORT = '8000'
 
-#BASE_URL = "http://" + HOST + ':' + PORT + '/'
+BASE_URL = "http://" + HOST + ':' + PORT + '/'
 
-BASE_URL = "http://asmryealim9702.pythonanywhere.com/"
+#BASE_URL = "http://asmryealim9702.pythonanywhere.com/"
 
 Debug = False
 
