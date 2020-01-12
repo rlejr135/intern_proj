@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <title>FoodTruck_ASMR</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://asmr.dothome.co.kr/favicon.ico" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=1024">
+
+      <link rel="stylesheet" href="//t1.daumcdn.net/kakaomapweb/map/201907191559208/app_A.css">
+      <link rel="stylesheet" href="//t1.daumcdn.net/kakaomapweb/map/201907191559208/app_B.css">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <script type="text/javascript">
+
+    if (false === true && false === false && document.referrer.split('?')[0] === "https://accounts.kakao.com/login/kakaomap?continue=".split('?')[0]) {
+      window.location.href = window.location.origin + '/user/signup';
+    }
+    </script>
+
+
+
+
+
+    <meta property="og:site_name" content="카카오맵">
+    <meta property="og:title" content="카카오맵">
+    <meta property="og:description" content="당신을 좋은 곳으로 안내 할 지도">
+    <meta property="og:type" content="websit">
+    <meta property="og:image" content="//t1.daumcdn.net/localimg/localimages/07/common/ogtag.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="카카오맵">
+    <meta name="twitter:description" content="당신을 좋은 곳으로 안내 할 지도">
+    <meta name="twitter:image" content="//t1.daumcdn.net/localimg/localimages/07/common/ogtag.png">
+
+    <meta name="description" content="당신을 좋은 곳으로 안내 할 지도"><link rel="search" type="application/opensearchdescription+xml" href="/OpenSearch.xml" title="카카오맵">
+    <style>/* reset */
+    body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,blockquote,th,td,input,select,p,span,button{margin:0;padding:0}
+    fieldset,img{border:0 none}
+    dl,ul,ol,menu,li{list-style:none; text-align:left;}
+    ul.list_around{text-align:center;}
+    blockquote, q{quotes: none}
+    blockquote:before, blockquote:after,q:before, q:after{content:'';content:none}
+    input,select,textarea,button{vertical-align:middle}
+    input::-ms-clear{display:none}
+    button{border:0 none;background-color:transparent;cursor:pointer}
+    body{background:#fff}
+    body,th,td,input,select,textarea,button{font-size:12px;line-height:1.5;font-family:AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif;color:#222}
+    a{color:#333;text-decoration:none}
+    a:active, a:hover{text-decoration:underline}
+    a:active{background-color:transparent}
+    address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:normal}
+
+    /* global */
+    .screen_out{overflow:hidden;position:absolute;width:0;height:0;line-height:0;text-indent:-9999px}
+    .show{display:block}
+    .hide{display:none}
+
+    /* PC Social Share */
+    /* 2018-04-25 수정 시작 */
+    .social_comm_p{position:absolute;z-index:1000;}
+    .social_comm_p .img_social{display:block;overflow:hidden;font-size:0;background:url(//t1.daumcdn.net/daumtop_deco/images/common/social/img_social_180425.png) no-repeat 0 0;text-indent:-9999px}
+    .social_comm_p .sns_comm_p{overflow:hidden;position:relative;border:1px solid #e2e2e2;font-size:12px;color:#222;background-color:#fff;letter-spacing:-0.025em}
+    .social_comm_p .sns_comm_p .btn_close{position:absolute;top:7px;right:7px;width:24px;height:24px}
+    .social_comm_p .sns_comm_p .ico_close{width:14px;height:14px;margin:5px;background-position:-150px 0}
+    .social_comm_p .share_layer{position:relative;width:289px;min-height:253px}
+    .social_comm_p .list_sns{overflow:hidden;margin:29px 15px 0}
+    .social_comm_p .list_sns li{float:left;width:86px;height:86px}
+    .social_comm_p .list_sns .link_sns{display:block;text-align:center;text-decoration:none}
+    .social_comm_p .list_sns .link_sns .img_social{width:48px;height:48px;margin:0 auto}
+    .social_comm_p .list_sns .tit_sns{display:block;margin-top:7px;font-weight:normal;line-height:16px}
+    .social_comm_p .list_sns .ico_sns_ks{background-position:0 0}
+    .social_comm_p .list_sns .ico_sns_fb{background-position:-50px 0}
+    .social_comm_p .list_sns .ico_sns_tw{background-position:-100px 0}
+    .social_comm_p .list_sns .ico_sns_cafe{background-position:0 -50px}
+    .social_comm_p .list_sns .ico_sns_mail{background-position:-50px -50px}
+    .social_comm_p .list_sns .ico_sns_kt{background-position:0 -100px}
+    .social_comm_p .sns_copyurl{margin:1px 29px}
+    .social_comm_p .sns_copyurl .link_copyurl{display:block;overflow:hidden;position:relative;height:25px;line-height:25px;border:1px solid #d0d0d0;background-color:#f8f8f8;text-decoration:none}
+    .social_comm_p .sns_copyurl .txt_url{display:block;overflow:hidden;padding:0 60px 0 10px;color:#2695f8;white-space:nowrap;text-overflow:ellipsis}
+    .social_comm_p .sns_copyurl .txt_copy{position:absolute;top:0;right:0;width:53px;height:25px;border-left:1px solid #d0d0d0;background-color:#fff;text-align:center}
+    .social_comm_p .copyurl_layer{width:254px;height:78px;text-align:center}
+    .social_comm_p .inner_copyurl{display:table;width:100%;height:100%}
+    .social_comm_p .inner_copyurl .desc_copyurl{display:table-cell;padding:18px 0 17px;line-height:19px;vertical-align:middle}
+    .social_comm_p .sns_copyurl_type2 .tf_url{display:block;width:210px;height:25px;padding:0 10px;border:0 none;color:#2695f8;background-color:transparent}
+    .social_comm_p .sns_copyurl_type2 .desc_tip{padding:13px 0;line-height:18px;color:#888;text-align:center;letter-spacing:0}
+
+    @media
+    only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (min-device-pixel-ratio: 1.5),
+    only screen and (min-resolution: 144dpi),
+    only screen and (min-resolution: 1.5dppx){
+        .social_comm_p .img_social{background-image:url(//t1.daumcdn.net/daumtop_deco/images/common/social/rtn/img_social_180425.png);background-size:170px 160px}
+    }</style>
+
+    <style>
+    /*전체 박스*/.wrap {z-index:-1;position: absolute;left: 19px;bottom:-3px;width: 300px;height: 240px;margin-left: -150px;ext-align: left;overflow: hidden;font-size: 10px;font-family: '타이포_쌍문동','Malgun Gothic', dotum, '돋움', sans-serif;line-height: 1.5;}
+    .wrap * {padding: 0;margin: 0;}
+    /*검은 박스 크기*/.wrap .info {width: 250px;height: 205px;margin-left:0px; padding-bottom:35px;/*border-radius: 5px;border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;*/overflow: hidden;/*background: #444;*/ background: url('http://asmr.dothome.co.kr/pinbox3.png'); background-repeat:no-repeat; background-size: 250px 240px;}
+    .wrap .info:nth-child(1) {border: 0;box-shadow: 0px 1px 2px #888;}
+    /*박스위 제목*/.info .title {padding: 0px 0 0 0px;width : 250px; height: 30px;margin-top:5px; margin-bottom:3px;/*background: #444;*/border-bottom: 1px solid #444;font-size: 21px;font-weight:650;color: #eee;text-align:center;}
+
+    /*내부박스*/.info .body {position: relative;overflow: hidden; width: 250px; height: 159px;opacity:0.8;}
+    .info .body:hover {opacity:1;}
+    /*클릭시정보표시*/.info .desc {position: relative;margin: 150px 0 0px;height: 10px;}
+    /*사진 들어가는창*/.info .img {position: absolute;top: 0px;left: 15px;width: 218px;height: 150px;border: 1px solid #444;color: #888;overflow: hidden; text-align:center;}
+    /*빨간삼각형*/.triangle {position:absolute;;width:50px;height:50px;top:0;left:0px;background: url('http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/triangle.png') no-repeat; text-indent:0.4em;text-align:left;font-size:20px;color: #eee;}
+    /*흰색핀*/.info:after {content: '';position: absolute;margin-left: -14px;left: 50%;bottom: 0%;width: 33px;height: 32px/*;background: url('http://asmr.dothome.co.kr/pin.png')*/;background-repeat: no-repeat;background-size: 33px 32px;}
+    .info .link {color: #5085BB;}
+    </style>
+
+    <style>
+    .wrapper {
+        width: 280px;
+        margin-left: 50px;
+    }
+
+    .wrapper p {
+        text-align:left;
+        font-size:24px;
+        color:#000;
+        font-weight:bold;
+    }
+
+    .graph li{
+      margin: 10px 0;
+      background-color: #000;
+      border-radius: 5px;
+      position: relative;
+
+    }
+
+    .graph li.straw {position:relative;}
+    .graph li.watermelon {position:relative;}
+    .graph li.banana {position:relative;}
+    .graph li.blueberry {position:relative;}
+
+
+    .graph li.straw::before { content:""; position:absolute; left:-60px; background: url("http://asmr.dothome.co.kr/straw.png") no-repeat; background-size: 58px 58px;width:100%; height:100%;}
+    .graph li.watermelon::before { content:""; position:absolute; left:-60px; background: url("http://asmr.dothome.co.kr/watermelon.PNG") no-repeat; background-size: 58px 58px;width:100%; height:100%;}
+    .graph li.banana::before { content:""; position:absolute; left:-60px; background: url("http://asmr.dothome.co.kr/banana.png") no-repeat; background-size: 58px 58px;width:100%; height:100%;}
+    .graph li.blueberry::before { content:""; position:absolute; left:-60px; background: url("http://asmr.dothome.co.kr/blueberry.PNG") no-repeat; background-size: 58px 58px;width:100%; height:100%;}
+
+
+    .graph li h2{
+          padding: 5px 10px 2px;
+          font-size: 15px;
+          background-color: #222;
+          border-bottom: 1px solid #222;
+          border-top-left-radius:5px;
+          border-top-right-radius: 5px;
+          color:#fff;
+    }
+
+    .graph li strong {
+          background-color: #666;
+          overflow: hidden;
+          line-height: 33px;
+          font-size: 14px;
+          display: block;
+          text-align: right;
+          border-bottom-right-radius: 5px;
+          border-bottom-left-radius: 5px;
+          box-shadow: inset -5px -5px 5px rgba(0,0,0,0.3);
+          color:#fff;
+    }
+
+    .graph li.straw span{
+      color:#000;
+      display:block;
+      background-color: #f55656;
+      width:0%;
+      height:100%;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+
+    .graph li.watermelon span{
+      color:#000;
+      display:block;
+      background-color: #7ffa64;
+      width:0%;
+      height:100%;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+
+
+    .graph li.banana span{
+      color:#000;
+      display:block;
+      background-color: #f5f24c;
+      width: 0%;
+      height:100%;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+
+
+    .graph li.blueberry span{
+      color:#000;
+      display:block;
+      background-color: #cb59ff;
+      width:0%;
+      height:100%;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+
+    </style>
+    <style>
+    .refresh_button {
+        border:5px;
+        border-color:#333;
+        border-radius:2.5px;
+        background-color: #333;
+        color: #fff;
+        text-align:center;
+        left:50%;
+        width:100px;
+        height:30px;
+        margin-left:110.5px;
+        margin-right:110.5px;
+    }
+
+    </style>
+</head>
+
+
+<body>
+  <div id="info" class="Info" style="width:1px;">
+
+  	<div id="info.body" class="body" style="height:853px;z-index:2;">
+      <img id="sidebar_image" width=372px height=240px text-align=center/>
+
+      <div class="favorite_exposed">
+            <h1 id="sidebar_name" style="font-size:20px;font-weight:onbeforeunload">축제</h1>
+            <br>
+            <p id="sidebar_name2" style="color:#666666">서울 강남구</p>
+            <br>
+            <p id="sidebar_name3" style = "color : #666666">#서울캐릭터라이선싱페어 #수도권 #아이와함께<br>#친구와함께 #연인과함께</p>
+      </div>
+        <hr style = "color:#666666">
+
+  		<div id="info.main" class="Main INFOLEFT">
+      <div id="info.main.home" class="home">
+
+          <div id="info.location" class="theme">
+              <div class="reportError">
+                  <h3 class="screen_out">현재위치</h3>
+                  <span id="weather_place" class="approxAddr">수원시 영통구 </span>
+                  <div id="info.location.weather" class="infoAir">
+                      <strong class="screen_out">날씨정보</strong>
+                      <span class="txt_air">최고기온</span>
+                      <span id="max_tem" class="temper">35˚</span>
+                      <span class="txt_change">최저기온</span>
+                      <span id="min_tem" class="temper">25˚</span>
+                      <span class="txt_bar"></span>
+                      <span class="txt_dust">습도<span id="avg_rhm" data-id="dust_state" class="txt_state density1">60%</span></span>
+                      <span class="txt_dust">강수량<span id="sum_rn" data-id="micro_dust_state" class="txt_state density1">15mm</span></span>
+                  </div>
+                  <a id="info.location.reportError" href="http://www.weather.go.kr/weather/main.jsp" class="reportbug">더보기</a>
+              </div>
+          </div>
+
+          <div id="info.main.famous" class="famous"></div>
+
+          <div id="info.main.around" class="infoAround">
+              <ul class="list_around">
+                <li><button type="button" class="btn_around" style="width:90px">
+                  <a id="sidebar_link" href=""><img src="http://asmr.dothome.co.kr/pathimage.png" width=70px height=70px/></a>
+                  <span class="txt_around" Padding="0px 0px 0px"><p style="color:#27a;font-size:12px" width=70px>경로</p></span></button></li>
+                <li><button type="button" class="btn_around" style="width:90px"><img src="http://asmr.dothome.co.kr/findimage.png" width=70px height=70px/>
+                  <span class="txt_around"><p style="color:#27a;font-size:12px" width=70px>즐겨찾기</p></span></button></li>
+                <li><button type="button" class="btn_around" style="width:90px"><img src="http://asmr.dothome.co.kr/settingimage.png" width=70px height=70px/>
+                  <span class="txt_around"><p style="color:#27a;font-size:12px" width=70px>설정</p></span></button></li>
+              </ul>
+          </div>
+
+          <div id="info.main.favorite" class="regfav">
+            <div class="favorite_exposed">
+                <div class="favorite_registerated">
+                        <img src="http://asmr.dothome.co.kr/pinimage.png" width=25px height=25px align="left">
+                        <p id="sidebar_pin" style = "font-size: 15px">서울특별시 강남구 영동대로 513</p></br>
+                        <img src="http://asmr.dothome.co.kr/clockiimage.png" width=25px height=25px align="left">
+                        <p id="sidebar_clock" style = "font-size: 15px">2019.07.17 ~ 2019.07.21</p></br>
+                        <img src="http://asmr.dothome.co.kr/callimage.png" width=25px height=25px align="left">
+                        <p id="sidebar_call" style = "font-size: 15px">02-6000-8570~1</p>
+                </div>
+            </div>
+          </div>
+
+          <div id="info.main.newplace" class="newplace">
+              <div class="newPlace">
+                <div class="wrapper">
+                  <p class="sale">오늘의 판매 예측량</p>
+                    <ul class="graph">
+                        <li class="straw"><h2>Strawberry</h2><strong><span id="str">잔</span></strong></li>
+                        <li class="watermelon"><h2>watermelon</h2><strong><span id="wat">잔</span></strong></li>
+                        <li class="banana"><h2>Banana</h2><strong><span id="ban">잔</span></strong></li>
+                        <li class="blueberry"><h2>Blueberry</h2><strong><span id="blu">잔</span></strong></li>
+                    </ul>
+                  </div>
+                  <!--<h6 class="tit_newplace">새로운 장소(여기에다가는 예상 판매량 넣을 꺼)</h6>
+                  <p class="desc_newplace">새로운 수정된 장소를 알고 계세요?<br>장소 제보는 지도 품질 향상에 큰 도움이 됩니다.</p>
+                  <a href="#none" class="xc link_newplace link_suggest" data-pos="left" data-channel="SEARCH_MIDDLE_NEWPLACE">신규 장소 등록</a>
+                  <a href="#none" class="xb link_newplace link_modify" data-pos="left" data-channel="SEARCH_MIDDLE_MODIFYMAP">지도 정보 수정</a>
+                -->
+              </div>
+          </div>
+          <div id="refresh" class="newplace">
+              <div class="newPlace">
+                  <button onclick="openTextFile()" class="refresh_button">실시간분석</button>
+              </div>
+          </div>
+                  <script type="text/javascript">
+                      function openTextFile() {
+                      if(document.getElementById('sidebar_name').innerHTML == festival_name_1)
+                      {
+                        document.getElementById('str').innerHTML = str1+"잔";
+                        document.getElementById('ban').innerHTML = ban1+"잔";
+                        document.getElementById('blu').innerHTML = blu1+"잔";
+                        document.getElementById('wat').innerHTML = wat1+"잔";
+
+                        document.getElementById('str').style.width = str1 + "%";
+                        document.getElementById('ban').style.width = ban1 + "%";
+                        document.getElementById('wat').style.width = wat1 + "%";
+                        document.getElementById('blu').style.width = blu1 + "%";
+
+                        document.getElementById('str').style.color = "#000";
+                        document.getElementById('wat').style.color = "#000";
+                        document.getElementById('ban').style.color = "#000";
+                        document.getElementById('blu').style.color = "#000";
+                      }
+                      else if(document.getElementById('sidebar_name').innerHTML == festival_name_2)
+                      {
+                        document.getElementById('str').innerHTML = str2+"잔";
+                        document.getElementById('ban').innerHTML = ban2+"잔";
+                        document.getElementById('blu').innerHTML = blu2+"잔";
+                        document.getElementById('wat').innerHTML = wat2+"잔";
+
+                        document.getElementById('str').style.width = str2 + "%";
+                        document.getElementById('ban').style.width = ban2 + "%";
+                        document.getElementById('wat').style.width = wat2 + "%";
+                        document.getElementById('blu').style.width = blu2 + "%";
+
+                        document.getElementById('str').style.color = "#000";
+                        document.getElementById('wat').style.color = "#000";
+                        document.getElementById('ban').style.color = "#000";
+                        document.getElementById('blu').style.color = "#000";
+
+                      }
+                      else {
+
+                        document.getElementById('str').innerHTML = str3+"잔";
+                        document.getElementById('ban').innerHTML = ban3+"잔";
+                        document.getElementById('blu').innerHTML = blu3+"잔";
+                        document.getElementById('wat').innerHTML = wat3+"잔";
+
+                        document.getElementById('str').style.width = str3 + "%";
+                        document.getElementById('ban').style.width = ban3 + "%";
+                        document.getElementById('wat').style.width = wat3 + "%";
+                        document.getElementById('blu').style.width = blu3 + "%";
+
+                        document.getElementById('str').style.color = "#000";
+                        document.getElementById('wat').style.color = "#000";
+                        document.getElementById('ban').style.color = "#000";
+                        document.getElementById('blu').style.color = "#000";
+
+
+                      }
+                    }
+</script>
+     </div>
+    </div>
+   </div>
+  </div>
+
+
+
+
+  <!--버튼-->
+
+            <div id="side_button_out" style="width:20px; height:50px; position:absolute; top:400px; left:0px; z-index:3;overflow:hidden;">
+
+                <script language="javascript">
+
+                  function frame_open() {
+                  var x = document.getElementById('info');
+                  x.style.width="390px";
+                  var y = document.getElementById('side_button');
+                  y.style.width="20px";
+                  var z = document.getElementById('side_button_out');
+                  z.style.width="0px";
+                  var a = document.getElementById('map');
+                  a.style.width="890px";
+                  a.style.left="390px";
+
+              }
+              </script>
+
+                <a href="javascript:frame_open()"><img id="side_button_out_img" src="http://asmr.dothome.co.kr/button_out.png" style="cursor: pointer; width:20px; height:50px;" /></a>
+
+            </div>
+            <div id="side_button" style="width:0px; height:50px; position:absolute; top:400px; left:390px; z-index:2;overflow:hidden;">
+
+
+                  <script language="javascript">
+
+                  function frame_close() {
+                  var x = document.getElementById('info');
+                  x.style.width="1px";
+                  var y = document.getElementById('side_button');
+                  y.style.width="0px";
+                  var z = document.getElementById('side_button_out');
+                  z.style.width="20px";
+                  var a = document.getElementById('map');
+                  a.style.width="1280px";
+                  a.style.left="0px";
+
+                  }
+                  </script>
+
+                  <a href="javascript:frame_close()"><img id="side_button_img" src="http://asmr.dothome.co.kr/button.png" style="cursor: pointer; width:20px; height:50px;" /></a>
+
+          </div>
+
+
+
+
+<div id="map" style="width:1280px; height:853px;position:absolute; left:0px;z-index:1;">
+          <div id="window" style="z-index:5; position: absolute; top:20px; right:20px; width:390px; height:50px;overflow:hidden;">
+                  <div id="navibar" style=" z-index=6; position:absolute; width:390px; height:50px;border-radius:7px;background-color:#33a0ff;">
+                        <img src="http://asmr.dothome.co.kr/asmr.png" width="50px"height="50px" style="border-radius:7px"/>
+                              <div id="title" style=" z-index=7;position:absolute; width:340px; height:50px; top:0px; left:50px; border-radius:7px; background-color:transparent;">
+                                    <p style="color:#ffffff;font-size:20px;font-family:'sans_serif';margin-top:10px;margin-bottom:10px;text-align:center;">FoodTruck_AutoDrive_MapService</p>
+                              </div>
+                  </div>
+          </div>
+</div>
+
+
+
+<span id="maplevel"></span>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=524efbb3857d22fff767c267e6e2ce07&libraries=services"></script>
+
+<script tpye="text/javascript">
+
+
+
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+    mapOption = {
+        center: new kakao.maps.LatLng(37.566826, 126.9786567), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };
+
+// 지도를 생성합니다
+var map = new kakao.maps.Map(mapContainer, mapOption);
+
+// 장소 검색 객체를 생성합니다
+var ps = new kakao.maps.services.Places();
+
+// 키워드로 장소를 검색합니다
+var dest1 = "서울특별시 중구 을지로 281"
+var dest2 = "서울특별시 종로구 이화장길 26"
+var dest3 = "서울특별시 종로구 이화장길 72"
+var dest1_1 = dest1.replace(/ /g, '%20')
+var dest2_1 = dest2.replace(/ /g, '%20')
+var dest3_1 = dest3.replace(/ /g, '%20')
+
+var gu1 = "서울 영등포구"
+var gu2 = "서울 마포구"
+var gu3 = "서울 강남구"
+
+var clock1 = "2019.07.17 ~ 2019.07.21"
+var clock2 = "2019.08.15 ~ 2019.08.24"
+var clock3 = "2019.08.16 ~ 2019.08.18"
+
+var call1 = "02-6000-8570~1"
+var call2 = "02-325-8150"
+var call3 = "02-6010-8941"
+
+var link_template = "http://map.daum.net/?sName=정몽구%20미래자동차연구센터&eName="
+
+var festival_link_1 = link_template.concat(dest1);
+var festival_name_1 = "아시아프"
+var festival_name_2 = "뮤직드라마 당신만이"
+var festival_name_3 = "연극 죽여주는 이야기"
+var festival_name_1_a = festival_name_1.replace('2019', ' ')
+var festival_name_2_a = festival_name_2.replace('2019', ' ')
+var festival_name_3_a = festival_name_3.replace('2019', ' ')
+var festival_img_1 = "https://support.visitkorea.or.kr/img/call?cmd=VIEW&id=a2b6cf9b-cd5f-4c8d-b40a-29d32d3d5221&thumb";
+var festival_img_2 = "https://support.visitkorea.or.kr/img/call?cmd=VIEW&id=ca3f6f23-408c-43c2-ab2c-7389ade223d3&thumb";
+var festival_img_3 = "https://support.visitkorea.or.kr/img/call?cmd=VIEW&id=2a043b5d-ec58-499d-bf5f-10454eeae9e8&thumb";
+
+var festival_tag_1 = '#공연·예술·전시#관광지#나들이';
+var festival_tag_2 = '#공연/행사#관광지#나들이#뮤직드라마당신만이#수도권#아이와함께#연인과함께#친구와함께#힐링';
+var festival_tag_3 = '#공연/행사#관광지#수도권#아이와함께#연극#연극죽여주는이야기#연인과함께#죽여주는이야기#친구와함께#힐링';
+
+var max_tem = '';
+var min_tem = '';
+var avg_rhm = '';
+var sum_rn = '';
+
+var str0 = '';
+var wat0 = '';
+var ban0 = '';
+var blu0 = '';
+
+var str1 = '20';
+var wat1 = '54';
+var ban1 = '17';
+var blu1 = '57';
+
+var str2 = '36';
+var wat2 = '31';
+var ban2 = '87';
+var blu2 = '97';
+
+var str3 = '24';
+var wat3 = '74';
+var ban3 = '52';
+var blu3 = '47';
+
+$(function(){
+			$.ajax({
+				url:  'festget',
+				type:  'get',
+				async: false,
+				dataType:  'json',
+
+				success: function  (data) {
+					festival_name_1 = data.title1.replace('2019', ' ');
+					festival_name_1_a = data.title1;
+					dest1 = data.address1;
+					dest1_1 = data.address1.replace(/ /g, '%20');
+					festival_img_1 = data.img1;
+					festival_tag_1 = data.tag1;
+          call1 = data.number1;
+          gu1 = data.gu1;
+          clock1 = data.clock1;
+
+					festival_name_2 = data.title2.replace('2019', ' ');
+					festival_name_2_a = data.title2;
+					dest2 = data.address2;
+					dest2_1 = data.address2.replace(/ /g, '%20');
+					festival_img_2 = data.img2;
+					festival_tag_2 = data.tag2;
+          call2 = data.number2;
+          gu2 = data.gu2;
+          clock2 = data.clock2;
+
+					festival_name_3 = data.title3.replace('2019', ' ');
+					festival_name_3_a = data.title3;
+					dest3 = data.address3;
+					dest3_1 = data.address3.replace(/ /g, '%20');
+					festival_img_3 = data.img3;
+					festival_tag_3 = data.tag3;
+          call3 = data.number3;
+          gu3 = data.gu3;
+          clock3 = data.clock3;
+
+          max_tem = data.max_tem;
+          min_tem = data.min_tem;
+          avg_rhm = data.avg_rhm;
+          sum_rn = data.sum_rn;
+
+          str1 = data.str1;
+          wat1 = data.wat1;
+          ban1 = data.ban1;
+          blu1 = data.blu1;
+}
+
+
+				}
+			);
+		ps.keywordSearch(dest1, placesSearchCB1);
+		ps.keywordSearch(dest2, placesSearchCB2);
+		ps.keywordSearch(dest3, placesSearchCB3);
+    var m_img = document.getElementById('sidebar_image');
+    m_img.src = festival_img_1.replace('&thumb', ' ');
+    document.getElementById('sidebar_name').innerHTML = festival_name_1
+    document.getElementById('sidebar_name2').innerHTML = gu1
+    document.getElementById('sidebar_name3').innerHTML = festival_tag_1
+
+    var max_tem = max_tem.concat('˚C')
+    var min_tem = min_tem.concat('˚C')
+    var avg_rhm = avg_rhm.concat('%')
+    var sum_rn = sum_rn.concat('mm')
+
+    document.getElementById('weather_place').innerHTML = gu1
+    document.getElementById('max_tem').innerHTML = max_tem
+    document.getElementById('min_tem').innerHTML = min_tem
+    document.getElementById('avg_rhm').innerHTML = avg_rhm
+    document.getElementById('sum_rn').innerHTML = sum_rn
+
+    document.getElementById('sidebar_pin').innerHTML = dest1
+    document.getElementById('sidebar_clock').innerHTML = clock1
+    document.getElementById('sidebar_call').innerHTML = call1
+    document.getElementById('sidebar_link').href = link_template.concat(dest1_1)
+
+    document.getElementById('str').innerHTML = str1
+    document.getElementById('wat').innerHTML = wat1
+    document.getElementById('ban').innerHTML = ban1
+    document.getElementById('blu').innerHTML = blu1
+
+		}
+
+
+
+
+
+
+
+
+
+  )
+
+// 주석만 지우면 autodrive가 돼
+window.onbeforeunload = function () {
+   var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", "http://192.168.137.144:8000/run/?action=autodrive", true); // false for synchronous request
+    xmlHttp.send( null );
+};
+
+// 검색된 장소 위치를 기준으로 지도 범위를 재설정하기위해
+// LatLngBounds 객체에 좌표를 추가합니다
+var bounds = new kakao.maps.LatLngBounds();
+// 키워드 검색 완료 시 호출되는 콜백함수 입니다
+function placesSearchCB1 (data, status, pagination) {
+    if (status === kakao.maps.services.Status.OK) {
+
+        for (var i=0; i<1; i++) {
+          var content = '<div class="wrap">' +
+                      '    <div class="info">' +
+                      '        <div class="title">' +
+                      festival_name_1_a +
+                                  '<div class="close" onclick="closeOverlay()" title="닫기"></div>' +
+                      '        </div>' +
+                      '        <div class="body">' +
+                      '            <div class="img">' +
+                      '        <div class="triangle">1</div>' +
+
+                      '                <a href="#"><img src="' + festival_img_1 + 'width="260px"  +  height = "170px"onclick="image_setting1();"/></a>' +
+                      '           </div>' +
+                      '            <div class="desc">' +
+                      '            </div>' +
+                      '        </div>' +
+                      '    </div>' +
+                      '</div>';
+            var iwPosition = new kakao.maps.LatLng(data[i].y, data[i].x)
+
+
+
+            // 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
+            var overlay = new kakao.maps.CustomOverlay({
+                content: content,
+                map: map,
+                position: iwPosition
+            });
+
+            bounds.extend(new kakao.maps.LatLng(data[i].y, data[i].x));
+        }
+        // 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
+        map.setBounds(bounds);
+    }
+}
+
+function image_setting1(){
+    document.getElementById('sidebar_image').src = festival_img_1.replace('&thumb', ' '); // &thumb를 붙이면 해상도 sh*t
+
+    document.getElementById('sidebar_name').innerHTML = festival_name_1;
+    document.getElementById('sidebar_name2').innerHTML = gu1;
+    document.getElementById('sidebar_name3').innerHTML = festival_tag_1;
+
+    document.getElementById('weather_place').innerHTML = gu1;
+
+    document.getElementById('sidebar_pin').innerHTML = dest1;
+    document.getElementById('sidebar_clock').innerHTML = clock1;
+    document.getElementById('sidebar_call').innerHTML = call1;
+
+    document.getElementById('str').innerHTML = str0+"잔";
+    document.getElementById('str').style.width = "0%";
+    document.getElementById('wat').innerHTML = wat0+"잔";
+    document.getElementById('wat').style.width = "0%";
+    document.getElementById('ban').innerHTML = ban0+"잔";
+    document.getElementById('ban').style.width = "0%";
+    document.getElementById('blu').innerHTML = blu0+"잔";
+    document.getElementById('blu').style.width = "0%";
+
+    document.getElementById('str').style.color = "#666";
+    document.getElementById('wat').style.color = "#666";
+    document.getElementById('ban').style.color = "#666";
+    document.getElementById('blu').style.color = "#666";
+
+    document.getElementById('sidebar_link').href = link_template.concat(dest1_1);
+
+    var x = document.getElementById('info');
+    x.style.width="390px";
+    var y = document.getElementById('side_button');
+    y.style.width="20px";
+    var z = document.getElementById('side_button_out');
+    z.style.width="0px";
+    var a = document.getElementById('map');
+    a.style.width="900px";
+    a.style.left="390px";
+}
+
+function placesSearchCB2 (data, status, pagination) {
+    if (status === kakao.maps.services.Status.OK) {
+
+        for (var i=0; i<1; i++) {
+          var content = '<div class="wrap">' +
+                      '    <div class="info">' +
+                      '        <div class="title">' +
+                      festival_name_2_a +
+                      '            <div class="close" onclick="closeOverlay()" title="닫기"></div>' +
+                      '        </div>' +
+                      '        <div class="body">' +
+                      '            <div class="img">' +
+                      '        <div class="triangle">2</div>' +
+                      '                <a href="#"><img src="' + festival_img_2 + 'width="200px" height="170px" onclick="image_setting2();"/></a>' +
+                      '           </div>' +
+                      '            <div class="desc">' +
+                      '            </div>' +
+                      '        </div>' +
+                      '    </div>' +
+                      '</div>';
+            var iwPosition = new kakao.maps.LatLng(data[i].y, data[i].x)
+
+
+
+            // 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
+            var overlay = new kakao.maps.CustomOverlay({
+                content: content,
+                map: map,
+                position: iwPosition
+            });
+
+            bounds.extend(new kakao.maps.LatLng(data[i].y, data[i].x));
+        }
+        // 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
+        map.setBounds(bounds);
+    }
+}
+
+function image_setting2(){
+    document.getElementById('sidebar_image').src = festival_img_2.replace('&thumb', ' '); // &thumb를 붙이면 해상도 sh*t
+
+    document.getElementById('sidebar_name').innerHTML = festival_name_2;
+    document.getElementById('sidebar_name2').innerHTML = gu2;
+    document.getElementById('sidebar_name3').innerHTML = festival_tag_2;
+
+    document.getElementById('weather_place').innerHTML = gu2
+
+    document.getElementById('sidebar_pin').innerHTML = dest2;
+    document.getElementById('sidebar_clock').innerHTML = clock2;
+    document.getElementById('sidebar_call').innerHTML = call2;
+
+    document.getElementById('str').innerHTML = str0+"잔";
+    document.getElementById('str').style.width = "0%";
+    document.getElementById('wat').innerHTML = wat0+"잔";
+    document.getElementById('wat').style.width = "0%";
+    document.getElementById('ban').innerHTML = ban0+"잔";
+    document.getElementById('ban').style.width = "0%";
+    document.getElementById('blu').innerHTML = blu0+"잔";
+    document.getElementById('blu').style.width = "0%";
+
+    document.getElementById('str').style.color = "#666";
+    document.getElementById('wat').style.color = "#666";
+    document.getElementById('ban').style.color = "#666";
+    document.getElementById('blu').style.color = "#666";
+
+    var x = document.getElementById('info');
+    x.style.width="390px";
+    var y = document.getElementById('side_button');
+    y.style.width="20px";
+    var z = document.getElementById('side_button_out');
+    z.style.width="0px";
+    var a = document.getElementById('map');
+    a.style.width="900px";
+    a.style.left="390px";
+
+}
+
+function placesSearchCB3 (data, status, pagination) {
+    if (status === kakao.maps.services.Status.OK) {
+
+        for (var i=0; i<1; i++) {
+          var content = '<div class="wrap">' +
+                      '    <div class="info">' +
+                      '        <div class="title">' +
+                      festival_name_3_a +
+                      '            <div class="close" onclick="closeOverlay()" title="닫기"></div>' +
+                      '        </div>' +
+                      '        <div class="body">' +
+                      '            <div class="img">' +
+                      '        <div class="triangle">3</div>' +
+                      '                <a href="#"><img src="' + festival_img_3 + 'width="200px" height="170px" onclick="image_setting3();"/></a>' +
+                      '           </div>' +
+                      '            <div class="desc">' +
+                      '            </div>' +
+                      '        </div>' +
+                      '    </div>' +
+                      '</div>';
+            var iwPosition = new kakao.maps.LatLng(data[i].y, data[i].x)
+
+
+
+            // 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
+            var overlay = new kakao.maps.CustomOverlay({
+                content: content,
+                map: map,
+                position: iwPosition
+            });
+
+            bounds.extend(new kakao.maps.LatLng(data[i].y, data[i].x));
+        }
+        // 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
+        map.setBounds(bounds);
+
+        // 현재 지도의 레벨을 얻어옵니다
+        var level = map.getLevel();
+        // 지도를 1레벨 올립니다 (지도가 축소됩니다)
+        map.setLevel(level + 1);
+    }
+
+}
+
+
+function image_setting3(){
+    document.getElementById('sidebar_image').src = festival_img_3.replace('&thumb', ' '); // &thumb를 붙이면 해상도 sh*t
+
+    document.getElementById('sidebar_name').innerHTML = festival_name_3;
+    document.getElementById('sidebar_name2').innerHTML = gu3;
+    document.getElementById('sidebar_name3').innerHTML = festival_tag_3;
+
+    document.getElementById('weather_place').innerHTML = gu3
+
+    document.getElementById('sidebar_pin').innerHTML = dest3;
+    document.getElementById('sidebar_clock').innerHTML = clock3;
+    document.getElementById('sidebar_call').innerHTML = call3;
+
+    document.getElementById('str').innerHTML = str0+"잔";
+    document.getElementById('str').style.width = "0%";
+    document.getElementById('wat').innerHTML = wat0+"잔";
+    document.getElementById('wat').style.width = "0%";
+    document.getElementById('ban').innerHTML = ban0+"잔";
+    document.getElementById('ban').style.width = "0%";
+    document.getElementById('blu').innerHTML = blu0+"잔";
+    document.getElementById('blu').style.width = "0%";
+
+    document.getElementById('str').style.color = "#666";
+    document.getElementById('wat').style.color = "#666";
+    document.getElementById('ban').style.color = "#666";
+    document.getElementById('blu').style.color = "#666";
+
+
+    document.getElementById('sidebar_link').href = link_template.concat(dest3_1);
+
+    var x = document.getElementById('info');
+    x.style.width="390px";
+    var y = document.getElementById('side_button');
+    y.style.width="20px";
+    var z = document.getElementById('side_button_out');
+    z.style.width="0px";
+    var a = document.getElementById('map');
+    a.style.width="900px";
+    a.style.left="390px";
+
+}
+
+
+</script>
+</body>
+</html>
