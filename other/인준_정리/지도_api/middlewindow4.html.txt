@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <title>!!!미들윈도우!!!</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=1024">
+
+      <link rel="stylesheet" href="//t1.daumcdn.net/kakaomapweb/map/201907191559208/app_A.css">
+      <link rel="stylesheet" href="//t1.daumcdn.net/kakaomapweb/map/201907191559208/app_B.css">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <script type="text/javascript">
+
+    if (false === true && false === false && document.referrer.split('?')[0] === "https://accounts.kakao.com/login/kakaomap?continue=".split('?')[0]) {
+      window.location.href = window.location.origin + '/user/signup';
+    }
+    </script>
+
+
+
+
+
+    <meta property="og:site_name" content="카카오맵">
+    <meta property="og:title" content="카카오맵">
+    <meta property="og:description" content="당신을 좋은 곳으로 안내 할 지도">
+    <meta property="og:type" content="websit">
+    <meta property="og:image" content="//t1.daumcdn.net/localimg/localimages/07/common/ogtag.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="카카오맵">
+    <meta name="twitter:description" content="당신을 좋은 곳으로 안내 할 지도">
+    <meta name="twitter:image" content="//t1.daumcdn.net/localimg/localimages/07/common/ogtag.png">
+
+    <meta name="description" content="당신을 좋은 곳으로 안내 할 지도"><link rel="search" type="application/opensearchdescription+xml" href="/OpenSearch.xml" title="카카오맵">
+    <style>/* reset */
+    body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,blockquote,th,td,input,select,p,span,button{margin:0;padding:0}
+    fieldset,img{border:0 none}
+    dl,ul,ol,menu,li{list-style:none; text-align:left;}
+    ul.list_around{text-align:center;}
+    blockquote, q{quotes: none}
+    blockquote:before, blockquote:after,q:before, q:after{content:'';content:none}
+    input,select,textarea,button{vertical-align:middle}
+    input::-ms-clear{display:none}
+    button{border:0 none;background-color:transparent;cursor:pointer}
+    body{background:#fff}
+    body,th,td,input,select,textarea,button{font-size:12px;line-height:1.5;font-family:AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif;color:#222}
+    a{color:#333;text-decoration:none}
+    a:active, a:hover{text-decoration:underline}
+    a:active{background-color:transparent}
+    address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:normal}
+
+    /* global */
+    .screen_out{overflow:hidden;position:absolute;width:0;height:0;line-height:0;text-indent:-9999px}
+    .show{display:block}
+    .hide{display:none}
+
+    /* PC Social Share */
+    /* 2018-04-25 수정 시작 */
+    .social_comm_p{position:absolute;z-index:1000;}
+    .social_comm_p .img_social{display:block;overflow:hidden;font-size:0;background:url(//t1.daumcdn.net/daumtop_deco/images/common/social/img_social_180425.png) no-repeat 0 0;text-indent:-9999px}
+    .social_comm_p .sns_comm_p{overflow:hidden;position:relative;border:1px solid #e2e2e2;font-size:12px;color:#222;background-color:#fff;letter-spacing:-0.025em}
+    .social_comm_p .sns_comm_p .btn_close{position:absolute;top:7px;right:7px;width:24px;height:24px}
+    .social_comm_p .sns_comm_p .ico_close{width:14px;height:14px;margin:5px;background-position:-150px 0}
+    .social_comm_p .share_layer{position:relative;width:289px;min-height:253px}
+    .social_comm_p .list_sns{overflow:hidden;margin:29px 15px 0}
+    .social_comm_p .list_sns li{float:left;width:86px;height:86px}
+    .social_comm_p .list_sns .link_sns{display:block;text-align:center;text-decoration:none}
+    .social_comm_p .list_sns .link_sns .img_social{width:48px;height:48px;margin:0 auto}
+    .social_comm_p .list_sns .tit_sns{display:block;margin-top:7px;font-weight:normal;line-height:16px}
+    .social_comm_p .list_sns .ico_sns_ks{background-position:0 0}
+    .social_comm_p .list_sns .ico_sns_fb{background-position:-50px 0}
+    .social_comm_p .list_sns .ico_sns_tw{background-position:-100px 0}
+    .social_comm_p .list_sns .ico_sns_cafe{background-position:0 -50px}
+    .social_comm_p .list_sns .ico_sns_mail{background-position:-50px -50px}
+    .social_comm_p .list_sns .ico_sns_kt{background-position:0 -100px}
+    .social_comm_p .sns_copyurl{margin:1px 29px}
+    .social_comm_p .sns_copyurl .link_copyurl{display:block;overflow:hidden;position:relative;height:25px;line-height:25px;border:1px solid #d0d0d0;background-color:#f8f8f8;text-decoration:none}
+    .social_comm_p .sns_copyurl .txt_url{display:block;overflow:hidden;padding:0 60px 0 10px;color:#2695f8;white-space:nowrap;text-overflow:ellipsis}
+    .social_comm_p .sns_copyurl .txt_copy{position:absolute;top:0;right:0;width:53px;height:25px;border-left:1px solid #d0d0d0;background-color:#fff;text-align:center}
+    .social_comm_p .copyurl_layer{width:254px;height:78px;text-align:center}
+    .social_comm_p .inner_copyurl{display:table;width:100%;height:100%}
+    .social_comm_p .inner_copyurl .desc_copyurl{display:table-cell;padding:18px 0 17px;line-height:19px;vertical-align:middle}
+    .social_comm_p .sns_copyurl_type2 .tf_url{display:block;width:210px;height:25px;padding:0 10px;border:0 none;color:#2695f8;background-color:transparent}
+    .social_comm_p .sns_copyurl_type2 .desc_tip{padding:13px 0;line-height:18px;color:#888;text-align:center;letter-spacing:0}
+
+    @media
+    only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (min-device-pixel-ratio: 1.5),
+    only screen and (min-resolution: 144dpi),
+    only screen and (min-resolution: 1.5dppx) {
+        .social_comm_p .img_social{background-image:url(//t1.daumcdn.net/daumtop_deco/images/common/social/rtn/img_social_180425.png);background-size:170px 160px}
+    }</style>
+
+    <style>
+      .wrap {position: absolute;left: 0;bottom: 0px;width: 288px;height: 132px;margin-left: -144px;text-align: left;overflow: hidden;font-size: 10px;font-family: '타이포_쌍문동','Malgun Gothic', dotum, '돋움', sans-serif;line-height: 1.5;}
+      .wrap * {padding: 0;margin: 0;}
+      .wrap .info {width: 200px;height: 120px;margin-left:40px;border-radius: 5px;border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;overflow: hidden;background: #444;}
+      .wrap .info:nth-child(1) {border: 0;box-shadow: 0px 1px 2px #888;}
+      .info .title {padding: 5px 0 0 10px;width : 185px; height: 30px;background: #444;border-bottom: 1px solid #444;font-size: 20px;font-weight:lighter;color: #eee;text-align:center;}
+      .info .body {position: relative;overflow: hidden;}
+      .info .desc {position: relative;margin: 13px 0 0 90px;height: 75px;}
+      .info .img {position: absolute;top: 0px;left: 5px;width: 187px;height: 71px;border: 1px solid #444;color: #888;overflow: hidden; text-align:center;}
+      .triangle {position:absolute;width:24px;height:24px;top:0;left:41px;background: url('http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/triangle.png') no-repeat; text-align:center;font-size:18px;color: #eee;}
+      .info:after {content: '';position: absolute;margin-left: -12px;left: 50%;bottom: 0;width: 22px;height: 12px;background: url('http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
+      .info .link {color: #5085BB;}
+    </style>
+</head>
+<body>
+  <div id="info" class="Info">
+
+  	<div id="info.body" class="body" style="height: 650px;">
+      <img id="sidebar_image" width=372px height=240px text-align=center/>
+
+      <div class="favorite_exposed">
+            <h1 id="sidebar_name" style="font-size:20px;font-weight:onbeforeunload">축제</h1>
+            <br>
+            <p id="sidebar_name2" style="color:#666666">서울 강남구</p>
+            <br>
+            <p id="sidebar_name3" style = "color : #666666">#서울캐릭터라이선싱페어 #수도권 #아이와함께<br>#친구와함께 #연인과함께</p>
+      </div>
+        <hr style = "color:#666666">
+
+  		<div id="info.main" class="Main INFOLEFT">
+      <div id="info.main.home" class="home">
+
+          <div id="info.location" class="theme">
+              <div class="reportError">
+                  <h3 class="screen_out">현재위치</h3>
+                  <span id="info.location.approxAddr" class="approxAddr">수원시 영통구 </span>
+                  <div id="info.location.weather" class="infoAir">
+                      <strong class="screen_out">날씨정보</strong>
+                      <span class="txt_air">비온후 갬</span>
+                      <span class="temper">27˚</span>
+                      <span class="txt_change">어제보다 1℃ 높아요</span>
+                      <span class="txt_bar"></span>
+                      <span class="txt_dust">미세<span data-id="dust_state" class="txt_state density1">좋음</span></span>
+                      <span class="txt_dust">초미세<span data-id="micro_dust_state" class="txt_state density1">좋음</span></span>
+                  </div>
+                  <a id="info.location.reportError" href="iptargeting/form" class="reportbug">오류신고</a>
+              </div>
+          </div>
+
+          <div id="info.main.famous" class="famous"></div>
+
+          <div id="info.main.around" class="infoAround">
+              <ul class="list_around">
+                <li><button type="button" class="btn_around" style="width:90px">
+                  <a id="sidebar_link" href=""><img src="http://asmr.dothome.co.kr/pathimage.png" width=70px height=70px/></a>
+                  <span class="txt_around" Padding="0px 0px 0px"><p style="color:#27a;font-size:12px" width=70px>경로</p></span></button></li>
+                <li><button type="button" class="btn_around" style="width:90px"><img src="http://asmr.dothome.co.kr/findimage.png" width=70px height=70px/>
+                  <span class="txt_around"><p style="color:#27a;font-size:12px" width=70px>즐겨찾기</p></span></button></li>
+                <li><button type="button" class="btn_around" style="width:90px"><img src="http://asmr.dothome.co.kr/settingimage.png" width=70px height=70px/>
+                  <span class="txt_around"><p style="color:#27a;font-size:12px" width=70px>설정</p></span></button></li>
+              </ul>
+          </div>
+
+          <div id="info.main.favorite" class="regfav">
+            <div class="favorite_exposed">
+                <div class="favorite_registerated">
+                        <img src="http://asmr.dothome.co.kr/pinimage.png" width=25px height=25px align="left">
+                        <p id="sidebar_pin" style = "font-size: 15px">서울특별시 강남구 영동대로 513</p></br>
+                        <img src="http://asmr.dothome.co.kr/clockiimage.png" width=25px height=25px align="left">
+                        <p id="sidebar_clock" style = "font-size: 15px">2019.07.17 ~ 2019.07.21</p></br>
+                        <img src="http://asmr.dothome.co.kr/callimage.png" width=25px height=25px align="left">
+                        <p id="sidebar_call" style = "font-size: 15px">02-6000-8570~1</p>
+                </div>
+            </div>
+          </div>
+
+          <div id="info.main.newplace" class="newplace">
+              <div class="newPlace">
+                  <h6 class="tit_newplace">새로운 장소(여기에다가는 예상 판매량 넣을 꺼)</h6>
+                  <p class="desc_newplace">새로운 수정된 장소를 알고 계세요?<br>장소 제보는 지도 품질 향상에 큰 도움이 됩니다.</p>
+                  <a href="#none" class="xc link_newplace link_suggest" data-pos="left" data-channel="SEARCH_MIDDLE_NEWPLACE">신규 장소 등록</a>
+                  <a href="#none" class="xb link_newplace link_modify" data-pos="left" data-channel="SEARCH_MIDDLE_MODIFYMAP">지도 정보 수정</a>
+              </div>
+          </div>
+
+     </div>
+    </div>
+   </div>
+  </div>
+<div id="map" style="width:900px;height:650px;"></div>
+<span id="maplevel"></span>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=524efbb3857d22fff767c267e6e2ce07&libraries=services"></script>
+
+<script tpye="text/javascript">
+
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+    mapOption = {
+        center: new kakao.maps.LatLng(37.566826, 126.9786567), // 지도의 중심좌표
+        level: 4 // 지도의 확대 레벨
+    };
+
+// 지도를 생성합니다
+var map = new kakao.maps.Map(mapContainer, mapOption);
+
+// 장소 검색 객체를 생성합니다
+var ps = new kakao.maps.services.Places();
+
+// 키워드로 장소를 검색합니다
+var dest1 = "서울특별시 여의도한강공원 등"
+var dest2 = "서울특별시 마포구 증산로 87"
+var dest3 = "서울특별시 강남구 남부순환로 3104"
+var dest1_1 = dest1.replace(/ /g, '%20')
+var dest2_1 = dest2.replace(/ /g, '%20')
+var dest3_1 = dest3.replace(/ /g, '%20')
+
+var gu1 = "서울 영등포구"
+var gu2 = "서울 마포구"
+var gu3 = "서울 강남구"
+var tag1 = "#서울가볼만한곳#여름축제#축제#한강#한강공원#한강몽땅여름축제#한강에서_즐기는_문화바캉스"
+var tag2 = "#공연·예술·전시#관광지"
+var tag3 = "#관광지#나들이#도심여행#먹거리#서울디저트페어#수도권#아이와함께#연인과함께#이색체험#전시장#친구와함께"
+var pin1 = "서울특별시 강남구 영동대로 513"
+var pin2 = "서울특별시 마포구 증산로 87"
+var pin3 = "서울특별시 강남구 남부순환로 3104"
+var clock1 = "2019.07.17 ~ 2019.07.21"
+var clock2 = "2019.08.15 ~ 2019.08.24"
+var clock3 = "2019.08.16 ~ 2019.08.18"
+var call1 = "02-6000-8570~1"
+var call2 = "02-325-8150"
+var call3 = "02-6010-8941"
+
+
+
+
+var link_template = "http://map.daum.net/?sName=정몽구%20미래자동차연구센터&eName="
+
+var festival_link_1 = link_template.concat(dest1);
+var festival_name_1 = "한강몽땅 여름축제 2019"
+var festival_name_2 = "서울프린지페스티벌 2019"
+var festival_name_3 = "서울디저트페어 '수박&망고' 2019"
+var festival_name_1_a = festival_name_1.replace('2019', ' ')
+var festival_name_2_a = festival_name_2.replace('2019', ' ')
+var festival_name_3_a = festival_name_3.replace('2019', ' ')
+var festival_img_1 = "https://support.visitkorea.or.kr/img/call?cmd=VIEW&id=3249830b-cb1b-4717-af3e-d9791b50b196&thumb";
+var festival_img_2 = "https://support.visitkorea.or.kr/img/call?cmd=VIEW&id=85b7d3ea-aa20-4a43-bbbf-08d9dc68675a&thumb";
+var festival_img_3 = "https://support.visitkorea.or.kr/img/call?cmd=VIEW&id=9aca44f4-d321-41be-a71d-3f794118846e&thumb";
+
+var festival_tag_1 = '';
+var festival_tag_2 = '';
+var festival_tag_3 = '';
+
+var m_img = document.getElementById('sidebar_image');
+m_img.src = "https://support.visitkorea.or.kr/img/call?cmd=VIEW&id=c6ec3ad0-a2da-44ff-a3d0-f8f70fdc8c46";
+document.getElementById('sidebar_name').innerHTML = "캐릭터 라이선싱 페어 2019"
+document.getElementById('sidebar_name2').innerHTML = "서울 강남구"
+document.getElementById('sidebar_name3').innerHTML = "#서울캐릭터라이선싱페어 #수도권 #아이와함께<br>#친구와함께 #연인과함께"
+
+
+document.getElementById('sidebar_pin').innerHTML = "서울특별시 강남구 영동대로 513"
+document.getElementById('sidebar_clock').innerHTML = "2019.07.17 ~ 2019.07.21"
+document.getElementById('sidebar_call').innerHTML = "02-6000-8570~1"
+
+
+
+
+
+
+ps.keywordSearch(dest1, placesSearchCB1);
+ps.keywordSearch(dest2, placesSearchCB2);
+ps.keywordSearch(dest3, placesSearchCB3);
+
+window.onbeforeunload = function () {
+//   var xmlHttp = new XMLHttpRequest();
+//    xmlHttp.open( "GET", "http://192.168.137.144:8000/run/?action=autodrive", true); // false for synchronous request
+//    xmlHttp.send( null );
+};
+
+// 검색된 장소 위치를 기준으로 지도 범위를 재설정하기위해
+// LatLngBounds 객체에 좌표를 추가합니다
+var bounds = new kakao.maps.LatLngBounds();
+// 키워드 검색 완료 시 호출되는 콜백함수 입니다
+function placesSearchCB1 (data, status, pagination) {
+    if (status === kakao.maps.services.Status.OK) {
+
+        for (var i=0; i<1; i++) {
+          var content = '<div class="wrap">' +
+                      '    <div class="info">' +
+                      '        <div class="title">' +
+                      festival_name_1_a +
+                      '            <div class="close" onclick="closeOverlay()" title="닫기"></div>' +
+                      '        </div>' +
+                      '        <div class="body">' +
+                      '            <div class="img">' +
+                      '        <div class="triangle">1</div>' +
+
+                      '                <a href="#"><img src="' + festival_img_1 + 'width="10px" height="70px" onclick="image_setting1();"/></a>' +
+                      '           </div>' +
+                      '            <div class="desc">' +
+                      '            </div>' +
+                      '        </div>' +
+                      '    </div>' +
+                      '</div>';
+            var iwPosition = new kakao.maps.LatLng(data[i].y, data[i].x)
+            var marker = new kakao.maps.Marker({
+                map: map,
+                position: iwPosition
+            });
+            // 마커 위에 커스텀오버레이를 표시합니다
+            // 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
+            var overlay = new kakao.maps.CustomOverlay({
+                content: content,
+                map: map,
+                position: marker.getPosition()
+            });
+
+            bounds.extend(new kakao.maps.LatLng(data[i].y, data[i].x));
+        }
+        // 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
+        map.setBounds(bounds);
+    }
+}
+
+function image_setting1(){
+    document.getElementById('sidebar_image').src = festival_img_1.replace('&thumb', ' '); // &thumb를 붙이면 해상도 sh*t
+    document.getElementById('sidebar_name').innerHTML = festival_name_1;
+    document.getElementById('sidebar_name2').innerHTML = gu1;
+    document.getElementById('sidebar_name3').innerHTML = tag1;
+
+    document.getElementById('sidebar_pin').innerHTML = pin1;
+    document.getElementById('sidebar_clock').innerHTML = clock1;
+    document.getElementById('sidebar_call').innerHTML = call1;
+
+    document.getElementById('sidebar_link').href = link_template.concat(dest1_1)
+}
+
+function placesSearchCB2 (data, status, pagination) {
+    if (status === kakao.maps.services.Status.OK) {
+
+        for (var i=0; i<1; i++) {
+          var content = '<div class="wrap">' +
+                      '    <div class="info">' +
+                      '        <div class="title">' +
+                      festival_name_2_a +
+                      '            <div class="close" onclick="closeOverlay()" title="닫기"></div>' +
+                      '        </div>' +
+                      '        <div class="body">' +
+                      '            <div class="img">' +
+                      '        <div class="triangle">2</div>' +
+                      '                <a href="#"><img src="' + festival_img_2 + 'width="10px" height="70px" onclick="image_setting2();"/></a>' +
+                      '           </div>' +
+                      '            <div class="desc">' +
+                      '            </div>' +
+                      '        </div>' +
+                      '    </div>' +
+                      '</div>';
+            var iwPosition = new kakao.maps.LatLng(data[i].y, data[i].x)
+            var marker = new kakao.maps.Marker({
+                map: map,
+                position: iwPosition
+            });
+            // 마커 위에 커스텀오버레이를 표시합니다
+            // 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
+            var overlay = new kakao.maps.CustomOverlay({
+                content: content,
+                map: map,
+                position: marker.getPosition()
+            });
+
+            bounds.extend(new kakao.maps.LatLng(data[i].y, data[i].x));
+        }
+        // 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
+        map.setBounds(bounds);
+    }
+}
+
+function image_setting2(){
+    document.getElementById('sidebar_image').src = festival_img_2.replace('&thumb', ' '); // &thumb를 붙이면 해상도 sh*t
+    document.getElementById('sidebar_name').innerHTML = festival_name_2;
+    document.getElementById('sidebar_name2').innerHTML = gu2;
+    document.getElementById('sidebar_name3').innerHTML = tag2;
+
+
+    document.getElementById('sidebar_pin').innerHTML = pin2;
+    document.getElementById('sidebar_clock').innerHTML = clock2;
+    document.getElementById('sidebar_call').innerHTML = call2;
+
+    document.getElementById('sidebar_link').href = link_template.concat(dest2_1)
+
+}
+
+function placesSearchCB3 (data, status, pagination) {
+    if (status === kakao.maps.services.Status.OK) {
+
+        for (var i=0; i<1; i++) {
+          var content = '<div class="wrap">' +
+                      '    <div class="info">' +
+                      '        <div class="title">' +
+                      festival_name_3_a +
+                      '            <div class="close" onclick="closeOverlay()" title="닫기"></div>' +
+                      '        </div>' +
+                      '        <div class="body">' +
+                      '            <div class="img">' +
+                      '        <div class="triangle">3</div>' +
+                      '                <a href="#"><img src="' + festival_img_3 + 'width="10px" height="70px" onclick="image_setting3();"/></a>' +
+                      '           </div>' +
+                      '            <div class="desc">' +
+                      '            </div>' +
+                      '        </div>' +
+                      '    </div>' +
+                      '</div>';
+            var iwPosition = new kakao.maps.LatLng(data[i].y, data[i].x)
+            var marker = new kakao.maps.Marker({
+                map: map,
+                position: iwPosition
+            });
+            // 마커 위에 커스텀오버레이를 표시합니다
+            // 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
+            var overlay = new kakao.maps.CustomOverlay({
+                content: content,
+                map: map,
+                position: marker.getPosition()
+            });
+
+            bounds.extend(new kakao.maps.LatLng(data[i].y, data[i].x));
+        }
+        // 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
+        map.setBounds(bounds);
+
+        // 현재 지도의 레벨을 얻어옵니다
+        var level = map.getLevel();
+        // 지도를 1레벨 올립니다 (지도가 축소됩니다)
+        map.setLevel(level + 1);
+    }
+
+}
+
+
+function image_setting3(){
+    document.getElementById('sidebar_image').src = festival_img_3.replace('&thumb', ' '); // &thumb를 붙이면 해상도 sh*t
+    document.getElementById('sidebar_name').innerHTML = festival_name_3;
+    document.getElementById('sidebar_name2').innerHTML = gu3;
+    document.getElementById('sidebar_name3').innerHTML = tag3;
+
+
+    document.getElementById('sidebar_pin').innerHTML = pin3;
+    document.getElementById('sidebar_clock').innerHTML = clock3;
+    document.getElementById('sidebar_call').innerHTML = call3;
+
+    document.getElementById('sidebar_link').href = link_template.concat(dest3_1)
+
+}
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자동차 다중 경로안내 30</title>
+</head>
+<body>
+<div id="map_div" ></div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://apis.skplanetx.com/tmap/js?version=1&format=javascript&appKey=d1d862ef-52ee-34fc-bed3-6eb1319ad77b"></script>
+<script>
+$(function(){
+var map;
+var markerLayer;
+var vectorLayer;
+
+$(function(){
+map = new Tmap.Map({div:"map_div", width:'100%', height:'500px'});
+
+markerLayer = new Tmap.Layer.Markers();
+   map.addLayer(markerLayer);
+
+   vectorLayer = new Tmap.Layer.Vector("vectorLayerID");
+map.addLayer(vectorLayer);
+
+routeSequential30();
+});
+
+/*
+* 자동차 다중 경로안내 30
+*/
+function routeSequential30() {
+   var obj = {
+       "reqCoordType" : "BESSEL",
+       "resCoordType" : "EPSG3857",
+       "startName" : "출발",
+       "startX" : "4571394",
+       "startY" : "1352080",
+       "startTime" : "201607010900",
+       "endName" : "도착",
+       "endX" : "4571597",
+       "endY" : "1352269",
+       "endRpFlag" : "18",
+       "endPoiId" : "",
+       "searchOption" : "0",
+       "carType" : "4",
+       "viaPoints" :
+       [
+           {
+           "viaPointId" : "test01",
+           "viaPointName" : "test01",
+           "viaX" : "4571597",
+           "viaDetailAddress" : "2001동, 1001호",
+           "viaY" : "1352269",
+           "viaPoiId" : "",
+           "rpFlag":"-1",
+           "viaTime": "600",
+           "wishStartTime": "201606301700",
+           "wishEndTime": "201606301900"
+           },
+           {
+           "viaPointId" : "test02",
+           "viaPointName" : "test02",
+           "viaX" : "4571370",
+           "viaDetailAddress" : "2001동, 1002호",
+           "viaY" : "1352287",
+           "viaPoiId" : "",
+           "rpFlag":"-1",
+           "viaTime": "600",
+           "wishStartTime":
+           "201606301700",
+           "wishEndTime": "201606301900"},
+           { "viaPointId" : "test03","viaPointName" : "test03","viaX" : "4571408","viaDetailAddress" : "2001동, 1003호","viaY" : "1352396","viaPoiId" : "","rpFlag":"-1", "viaTime": "600", "wishStartTime": "201606301700", "wishEndTime": "201606301900"},
+           { "viaPointId" : "test04","viaPointName" : "test04","viaX" : "4571421","viaDetailAddress" : "2001동, 1004호","viaY" : "1352514","viaPoiId" : "","rpFlag":"-1", "viaTime": "600", "wishStartTime": "201606301700", "wishEndTime": "201606301900"},
+           { "viaPointId" : "test05","viaPointName" : "test05","viaX" : "4571422","viaDetailAddress" : "2001동, 1005호","viaY" : "1352515","viaPoiId" : "","rpFlag":"-1", "viaTime": "600", "wishStartTime": "201606301700", "wishEndTime": "201606301900"},
+           { "viaPointId" : "test06","viaPointName" : "test06","viaX" : "4571423","viaDetailAddress" : "2001동, 1006호","viaY" : "1352516","viaPoiId" : "","rpFlag":"-1", "viaTime": "600", "wishStartTime": "201606301700", "wishEndTime": "201606301900"},
+           { "viaPointId" : "test07","viaPointName" : "test07","viaX" : "4571424","viaDetailAddress" : "2001동, 1007호","viaY" : "1352517","viaPoiId" : "","rpFlag":"-1", "viaTime": "600", "wishStartTime": "201606301700", "wishEndTime": "201606301900"},
+           { "viaPointId" : "test08","viaPointName" : "test08","viaX" : "4571425","viaDetailAddress" : "2001동, 1008호","viaY" : "1352518","viaPoiId" : "","rpFlag":"-1", "viaTime": "600", "wishStartTime": "201606301700", "wishEndTime": "201606301900"},
+           { "viaPointId" : "test09","viaPointName" : "test09","viaX" : "4571426","viaDetailAddress" : "2001동, 1009호","viaY" : "1352519","viaPoiId" : "","rpFlag":"-1", "viaTime": "600", "wishStartTime": "201606301700", "wishEndTime": "201606301900"},
+           { "viaPointId" : "test10","viaPointName" : "test10","viaX" : "4571427","viaDetailAddress" : "2001동, 1010호","viaY" : "1352520","viaPoiId" : "","rpFlag":"-1", "viaTime": "600", "wishStartTime": "201606301700", "wishEndTime": "201606301900"},
+           { "viaPointId" : "test11","viaPointName" : "test11","viaX" : "4571428","viaDetailAddress" : "2001동, 1011호","viaY" : "1352521","viaPoiId" : "","rpFlag":"-1", "viaTime": "600", "wishStartTime": "201606301700", "wishEndTime": "201606301900"},
+           { "viaPointId" : "test12","viaPointName" : "test12","viaX" : "4571429","viaDetailAddress" : "2001동, 1012호","viaY" : "1352522","viaPoiId" : "","rpFlag":"-1", "viaTime": "600", "wishStartTime": "201606301700", "wishEndTime": "201606301900"},
+           { "viaPointId" : "test13","viaPointName" : "test13","viaX" : "4571430","viaDetailAddress" : "2001동, 1013호","viaY" : "1352523","viaPoiId" : "","rpFlag":"-1", "viaTime": "600", "wishStartTime": "201606301700", "wishEndTime": "201606301900"},
+           { "viaPointId" : "test14","viaPointName" : "test14","viaX" : "4571431","viaDetailAddress" : "2001동, 1014호","viaY" : "1352524","viaPoiId" : "","rpFlag":"-1", "viaTime": "600", "wishStartTime": "201606301700", "wishEndTime": "201606301900"},
+           { "viaPointId" : "test15","viaPointName" : "test15","viaX" : "4571432","viaDetailAddress" : "2001동, 1015호","viaY" : "1352525","viaPoiId" : "","rpFlag":"-1", "viaTime": "600", "wishStartTime": "201606301700", "wishEndTime": "201606301900"}
+       ]
+
+    };
+   var jsonString = JSON.stringify(obj);
+
+   $.ajax({
+       method : "POST",
+       url : "http://apis.skplanetx.com/tmap/routes/routeSequential30?version=1",
+       headers : {
+           "Content-Type" : "application/json",
+           "appKey" : "d1d862ef-52ee-34fc-bed3-6eb1319ad77b"
+       },
+       data : jsonString,
+       success : onSuccess
+   });
+}
+
+function onSuccess( data ) {
+   //console.log( data ) // 응답 데이터 구조를 보시려면 주석을 푸시면 됩니다.
+   var features = data.features;
+   var i, j, geometry;
+   var arrPoint = [];
+   for( i in features ) {
+       geometry = features[i].geometry;
+       if( geometry.type == "Point" ) {
+           addMarker( geometry.coordinates[0], geometry.coordinates[1] );
+       }
+       else if( geometry.type == "LineString" ) {
+        for( j in geometry.coordinates ) {
+        arrPoint.push(new Tmap.Geometry.Point(geometry.coordinates[j][0], geometry.coordinates[j][1]));
+        }
+       }
+   }
+
+   drawLine( arrPoint );
+
+   map.setCenter( new Tmap.LonLat(14135465.686132, 4517533.177352), 14 );
+}
+
+function addMarker(lon, lat) {
+   var lonlat = new Tmap.LonLat(lon, lat);
+
+   var size = new Tmap.Size(24,38);
+   var offset = new Tmap.Pixel(-(size.w/2), -(size.h/2));
+   var icon = new Tmap.Icon('https://developers.skplanetx.com/upload/tmap/marker/pin_b_m_a.png', size, offset);
+
+   var marker = new Tmap.Marker(lonlat, icon);
+   markerLayer.addMarker(marker);
+}
+
+function drawLine( arrPoint ) {
+var lineString = new Tmap.Geometry.LineString(arrPoint);
+var style_bold = {strokeWidth: 3};
+var mLineFeature = new Tmap.Feature.Vector(lineString, null, style_bold);
+vectorLayer.addFeatures([mLineFeature]);
+}
+});
+</script>
+</body>
+</html>

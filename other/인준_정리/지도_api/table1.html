@@ -1,0 +1,65 @@
+﻿<html>
+  <head>
+    <meta charset="utf-8">
+    <title> 카카오 길찾기 </title>
+  </head>
+  <body >
+
+      <table border="1">
+          <th>1순위</th>
+          <th>2순위</th>
+          <th>3순위</th>
+        <tr><!-- 첫번째 줄 시작 -->
+          <td><!-- 첫번째 칸 -->
+            <a id="festival_link_1" >
+            <img id = "festival_img_1" width=400 height=300>
+            </a>
+          </td>
+          <td><!-- 두번째 칸 -->
+            <a id="festival_link_2">
+            <img id = "festival_img_2" width=400 height=300>
+            </a>
+          </td>
+          <td><!-- 세번째 칸 -->
+			<a id="festival_link_3">
+            <img id="festival_img_3" width=400 height=300>
+			</a>
+          </td>
+
+
+      </table>
+
+
+	  <script>
+
+		var img1 = document.getElementById('festival_img_1');
+		var link1 = document.getElementById('festival_link_1');
+		var img2 = document.getElementById('festival_img_2');
+		var link2 = document.getElementById('festival_link_2');
+		var img3 = document.getElementById('festival_img_3');
+		var link3 = document.getElementById('festival_link_3');
+
+
+		var link_template = "http://map.daum.net/?sName=정몽구 미래자동차연구센터&eName="
+
+
+		var dest1 = "";
+		var dest2 = "공덕역";
+		var dest3 = "";
+
+		img1.src = 'https://support.visitkorea.or.kr/img/call?cmd=VIEW&id=35f54625-3a94-4078-8b61-82d2d375a8fd';
+		img1.title = "";
+		link1.href = link_template.concat("대전광역시 서구 문정로 131");
+
+		img2.src = 'https://support.visitkorea.or.kr/img/call?cmd=VIEW&id=7a549c8d-b0b1-470b-ad9f-a078a6a642ad';
+		img2.title = ""
+		link2.href = link_template.concat(dest2);
+
+		img3.src =  'https://support.visitkorea.or.kr/img/call?cmd=VIEW&id=9783c308-fc78-4352-a393-a28c1c75a178';
+		img3.title = ""
+		link3.href = link_template.concat(dest3)
+
+	  </script>
+
+  </body>
+</html>

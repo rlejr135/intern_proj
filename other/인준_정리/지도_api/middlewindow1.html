@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> middlewindow </title>
+  </head>
+  <body >
+
+      <table border="0">
+        <tr><!-- 첫번째 줄 시작 -->
+          <td><!-- 첫번째 칸 -->
+            <a id="festival_link_1" >
+            <img id = "festival_img_1" width=400 height=300>
+            </a>
+          </td>
+          <td colspan="2"><!-- 두번째 칸 -->
+            <strong>서울야시장 밤도깨비</strong> </br>
+            시작일   :  </br>
+            종료일   :  </br>
+            전화번호 :  </br>
+            주소    :  </br>
+          </td>
+
+        </tr>
+        <tr><!-- 첫번째 줄 시작 -->
+          <td><!-- 첫번째 칸 -->
+            <a id="festival_link_1" >
+            <img id = "festival_img_1" width=400 height=300>
+            </a>
+          </td>
+          <td><!-- 두번째 칸 -->
+            <img id = "rigth_arrow" >
+            <script>
+
+            </script>
+          </td>
+          <td><!-- 세번째 칸 -->
+      <a id="festival_link_3">
+            <img id="festival_img_3" width=400 height=300>
+      </a>
+          </td>
+        </tr>
+
+
+
+      </table>
+
+
+	  <script>
+
+		var img1 = document.getElementById('festival_img_1');
+		var link1 = document.getElementById('festival_link_1');
+		var img2 = document.getElementById('right_arrow');
+		var link2 = document.getElementById('festival_link_2');
+		var img3 = document.getElementById('festival_img_3');
+		var link3 = document.getElementById('festival_link_3');
+
+
+		var link_template = "http://map.daum.net/?sName=정몽구 미래자동차연구센터&eName="
+
+
+		var dest1 = "";
+		var dest2 = "공덕역";
+		var dest3 = "";
+
+
+		img1.src = 'https://support.visitkorea.or.kr/img/call?cmd=VIEW&id=35f54625-3a94-4078-8b61-82d2d375a8fd';
+		img1.title = "";
+		link1.href = link_template.concat("대전광역시 서구 문정로 131");
+
+		img2.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAclBMVEX///8BAAKRkZG7u7v7+/twcHD09PSLi4y5ublGRkczMjP39/c7OzxtbG38/PxEREWdnZ1kZGQ4ODi0tLSVlZXk5ORXVlcNDQ4uLi95eXrNzM1KSkvV1dWHh4gfHh/ExMSioqJgYGETExTg4OGqqarJycliypSbAAAD3klEQVR4nO2di1LiQBBFMyviK0JAIiBPgf3/X1wBZdmJJHMxWzO3u88HWHOq+053TFXIsh9QFoN8s+k/F+VP/kq67PruRD7qxj5O67yd+e1Z7mKfqGWmrsJkG/tQLfI0qwp+sIp9rtYoh98KOlfEPllLdPILgs79in22dni9KOjcXezDtcFdjaCIKpa1ghIUnxsM6RXnTYL0WaxPoYQqTgIMqRW3IYLUjXoTZkhcxV2gIa/iKNSQVrEINmTNYnCX0lZxBRhyKnYRQ07FukenKoxZXEOGjFXE2pRSEZgXB/gatbcUX8XfoCGhInjZMCouUEW+LN7Kr2Ljv6NMkQC4US2LCTKQrwhn0Ro1QRTcqAqyaENDQhUVZNGGhsoq8ikqGBqWRZVV5FNUkEVb4CRUUUGj2tBQWUU+RctiFctigijIogJFW+AkVNGGRhVr1ARRcKMqyKINDQlVVJBFGxoqq8inqGBoWBZVVpFPUUEWbYGTUEUFjWpDQ0IVFSgqyKINDQlVtAWuijVqgihQVDA0bIFTWUU+RQVZtAVOQhXhLI5inxgGVnyJfWIYuFHnsU8MgyqO+T45jQ4NvgsVziLhx9HBRuUbGWgVH2If9xqwLPLdNRnYqDexT3sViCLp9/uBRl3HPuuVhH/Kj285PRD6aVvH+u1+QJAzh4gg5V16jwgyzkOogi6PfVwcTNAtYp8XBhR0dD9mg2XQuWnsA6OgFaR7PIQF17FPDAIL3sY+MQgsOIt9YhBYsE827GHBx6fYR8ZAx4TLO7GPjAFX8EF6i+bSBR/JWhTOYJ/skrEM+gzFC5Jl0FrUx1a1xLBVzUd8Bm1VSwz8FiW7ZGxM+AzJKmhjwkf8mBCfQbYxgT/RkwlaBn3Er2rin+htVUsMe6L3sVUtMWxM+Mhf1cguGcugj718SQxrUR9b1RLDVjUf8Rm0VS0x7Im+Iii9RdlevuCXjPQMih8T4jPINibs5YuP+AzaqpYYtqpVBMW3KFkF7YneR/yYkJ9Bsha1ly8+4jMoflWT//JFegbZxsQKFWRb1baoINuq1t2AgmxjAvgs12cF2QTRELKtalmWY4JsqxpcQroMZtkUEmR7+fJBBxJkGxN75sJbNMteAEG2Ve3IOlyQbVX7ZBReQcIM7gmuIWUG94TmkG5VO/EWJsi3qp0Im4d8q9oZIZ9t5hwTXwT8A4N0THzRGzYJMq5q/9BURNox8ZeZ4Awe6dZmkL1FD9Q8X7Cuaj4X3zrNBLTokQubzaAX+2DtUU6+EWT8gZTL9Iqx5/fK91tMDXQXy3O/Vezz/A968+I9X44ns+l9wjfMHzxdPnQmtAu2AAAAAElFTkSuQmCC';
+		img2.title = ""
+		link2.href = link_template.concat(dest2);
+
+		img3.src =  'https://support.visitkorea.or.kr/img/call?cmd=VIEW&id=9783c308-fc78-4352-a393-a28c1c75a178';
+		img3.title = ""
+		link3.href = link_template.concat(dest3)
+
+	  </script>
+
+  </body>
+</html>
